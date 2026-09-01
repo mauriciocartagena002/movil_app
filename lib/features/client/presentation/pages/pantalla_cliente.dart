@@ -7,6 +7,7 @@ import 'pantalla_ejercicios.dart';
 import 'pantalla_inicio_cliente.dart';
 import 'pantalla_musculos.dart';
 import 'pantalla_perfil.dart';
+import 'pantalla_peso.dart';
 import 'pantalla_rutinas.dart';
 import 'pantalla_seguimiento_muscular.dart';
 
@@ -65,6 +66,11 @@ class _ClientShellPageState extends State<ClientShellPage> {
       icon: Icons.person_outline,
       selectedIcon: Icons.person,
     ),
+    _ClientNavItem(
+      label: 'Mi Peso',
+      icon: Icons.monitor_weight_outlined,
+      selectedIcon: Icons.monitor_weight,
+    ),
   ];
 
   void _selectPage(int index) {
@@ -114,6 +120,7 @@ class _ClientShellPageState extends State<ClientShellPage> {
         usuario: widget.usuario,
         onCerrarSesion: widget.onCerrarSesion,
       ),
+      const PantallaPeso(),
     ];
 
     return Scaffold(
